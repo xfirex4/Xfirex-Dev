@@ -1,0 +1,227 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Xfirex Dev — Páginas web creativas y accesibles</title>
+  <meta name="description" content="Xfirex Dev: catálogos, páginas informativas, minijuegos básicos, quizzes y más. Todo adaptado a tu negocio y bolsillo." />
+  <meta name="keywords" content="diseño web, catálogos online, páginas informativas, minijuegos, Xfirex Dev, desarrollo accesible, webs económicas" />
+  <meta name="author" content="Xfirex Dev" />
+  <meta property="og:title" content="Xfirex Dev — Web creativas y accesibles" />
+  <meta property="og:description" content="Catálogos, páginas informativas, minijuegos y más. Todo adaptado a tu bolsillo." />
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="es_ES" />
+
+  <style>
+    :root{
+      --bg:#0f1724; --card:#0b1220; --accent:#ff6b35; --muted:#9aa4b2; --white:#f4f7fb;
+      --radius:14px;
+      font-family:Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    }
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{
+      margin:0;
+      background:linear-gradient(180deg,#071124 0%,#0f1724 100%);
+      color:var(--white);
+      -webkit-font-smoothing:antialiased;
+      line-height:1.6;
+    }
+    .container{max-width:960px;margin:36px auto;padding:20px}
+    header{display:flex;align-items:center;gap:16px;flex-wrap:wrap}
+    .logo{
+      width:72px;height:72px;border-radius:12px;
+      background:linear-gradient(135deg,#111827,#1f2937);
+      display:flex;align-items:center;justify-content:center;
+      font-weight:700;font-size:22px;color:var(--accent);
+      box-shadow:0 6px 18px rgba(0,0,0,.4)
+    }
+    h1{margin:0;font-size:1.5rem}
+    p.lead{color:var(--muted);margin-top:6px}
+
+    .card{
+      background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(0,0,0,0.05));
+      padding:18px;border-radius:var(--radius);margin-top:18px
+    }
+    .grid{display:grid;grid-template-columns:1fr;gap:18px}
+    @media(min-width:780px){.grid{grid-template-columns:1fr 340px}}
+    .features li{margin:8px 0;list-style:none;padding-left:20px;position:relative}
+    .features li:before{
+      content:"✓";position:absolute;left:0;color:var(--accent);font-weight:700
+    }
+
+    .cta{display:flex;gap:12px;flex-wrap:wrap;margin-top:14px}
+    .btn{
+      background:var(--accent);color:white;
+      padding:10px 16px;border-radius:10px;
+      text-decoration:none;font-weight:600;
+      transition:background .3s ease, transform .2s ease;
+    }
+    .btn:hover{background:#ff814f;transform:translateY(-2px)}
+    .btn.ghost{
+      background:transparent;border:1px solid rgba(255,255,255,0.1);color:var(--white)
+    }
+    .btn.ghost:hover{border-color:var(--accent);color:var(--accent)}
+
+    footer{color:var(--muted);font-size:13px;margin-top:22px;text-align:center}
+    .faq dt{font-weight:700;margin-top:12px}
+    .small{font-size:13px;color:var(--muted)}
+
+    .portfolio-intro {
+      font-size: 0.95rem;
+      color: var(--muted);
+      margin-bottom: 16px;
+    }
+    .videos {
+      display: flex;justify-content: center;flex-wrap: wrap;gap: 20px;
+    }
+    .video-card {
+      background: var(--card);
+      padding: 12px;border-radius: var(--radius);
+      box-shadow: 0 0 15px rgba(0,0,0,.4);
+      max-width: 300px;
+      transition: transform .3s ease, box-shadow .3s ease;
+    }
+    .video-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 0 25px rgba(0,0,0,.6);
+    }
+    .video-card video {
+      width: 100%;border-radius: 10px;margin-bottom: 8px;
+    }
+    .video-card p {margin: 0;font-size: 0.9rem;color: var(--muted);}
+    @media(max-width:768px){
+      .videos{flex-direction:column;align-items:center}
+      .video-card{max-width:90%}
+    }
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: all 0.8s ease;
+    }
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    
+    @media (prefers-reduced-motion: reduce) {
+      .btn, .video-card, .reveal {transition:none !important}
+    }
+  </style>
+</head>
+<body>
+  <main class="container">
+    <header role="banner" class="reveal">
+      <div class="logo" aria-hidden="true">Xf</div>
+      <div>
+        <h1>Xfirex Dev — Creatividad web al alcance</h1>
+        <p class="lead">Catálogos, páginas informativas, minijuegos y más. Todo adaptado a tu bolsillo.</p>
+      </div>
+    </header>
+
+    <section class="card grid reveal" aria-label="Oferta principal">
+      <div>
+        <h2 style="margin-top:0">¿Qué es Xfirex Dev?</h2>
+        <p class="small" style="margin-top:6px">
+          Soy un <strong>desarrollador independiente</strong> con pasión por crear experiencias web ligeras y accesibles.
+          Cada proyecto lo diseño pensando en tu empresa, tus ideas y tu presupuesto.  
+          No busco competir con gigantes como Facebook o Amazon, sino darte soluciones simples y creativas que realmente funcionen para tu negocio.
+        </p>
+
+        <ul class="features" style="margin-top:12px;padding-left:0">
+          <li>Catálogos online (solo visuales)</li>
+          <li>Páginas con información de tu negocio o servicios</li>
+          <li>Minijuegos básicos y quizzes sencillos</li>
+          <li>Cualquier idea web ligera y divertida</li>
+          <li>Diseño responsive (móvil y desktop)</li>
+          <li>Enlace directo a tu WhatsApp para pedidos</li>
+          <li>Precios accesibles y entregas rápidas</li>
+        </ul>
+
+        <div class="cta">
+          <a class="btn" href="https://wa.me/50588545073" target="_blank" rel="noopener">📲 Enviarme WhatsApp</a>
+          <a class="btn ghost" href="#faq">❓ Preguntas</a>
+        </div>
+      </div>
+
+      <aside>
+        <div style="display:flex;flex-direction:column;gap:12px">
+          <div class="card reveal" style="padding:12px">
+            <strong>Ejemplo rápido</strong>
+            <p class="portfolio-intro">
+              En Xfirex Dev no solo hago catálogos, también páginas informativas, quizzes, minijuegos básicos y más.
+              Cada sitio puede incluir videos, imágenes y sonidos para darle vida a tu idea.
+            </p>
+
+            <div class="videos">
+              <div class="video-card reveal">
+                <video src="video1.mp4" autoplay muted loop playsinline aria-label="Ejemplo catálogo en línea"></video>
+                <p>Ejemplo 1: Catálogo en línea</p>
+              </div>
+              <div class="video-card reveal">
+                <video src="video2.mp4" autoplay muted loop playsinline aria-label="Ejemplo página informativa"></video>
+                <p>Ejemplo 2: Página informativa</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="card reveal" style="padding:12px">
+            <strong>Precios (orientativos)</strong>
+            <p class="small" style="margin:8px 0 0 0">Página simple: <strong>$15–$30</strong></p>
+            <p class="small" style="margin:4px 0 0 0">Catálogo o pagima mediana: <strong>$30–$50</strong></p>
+            <p class="small" style="margin:4px 0 0 0">Todo adaptado al cliente y su bolsillo</p>
+          </div>
+        </div>
+      </aside>
+    </section>
+
+    <section class="card reveal" id="faq" aria-label="Preguntas frecuentes">
+      <h3 style="margin-top:0">Preguntas frecuentes</h3>
+      <dl class="faq">
+        <dt>¿Guardás datos de tarjetas o creás cuentas para la página creada?</dt>
+        <dd class="small">No. Mis páginas son ligeras y visuales, con contacto directo por WhatsApp.</dd>
+
+        <dt>¿Qué tipo de proyectos hacés?</dt>
+        <dd class="small">Catálogos, páginas informativas, quizzes, minijuegos básicos y cualquier idea sencilla.</dd>
+
+        <dt>¿Cuánto tarda?</dt>
+        <dd class="small">De 1 a 5 días hábiles según el tamaño y complejidad del proyecto.</dd>
+
+        <dt>¿Puedo pedir algo muy grande como un Facebook?</dt>
+        <dd class="small">No. Xfirex Dev se centra en proyectos simples y funcionales para emprendedores y negocios pequeños.</dd>
+      </dl>
+    </section>
+
+    <section class="card reveal" aria-label="Contacto">
+      <h3 style="margin-top:0">¿Listo para empezar?</h3>
+      <p class="small">Contame tu idea: catálogo, página informativa o minijuego. Lo adaptamos a tu presupuesto y lo hacemos con dedicación.</p>
+      <div style="margin-top:10px">
+        <a class="btn" href="https://wa.me/50588545073" target="_blank" rel="noopener">📲 Hablar por WhatsApp</a>
+        <span style="margin-left:8px;color:var(--muted);font-size:13px">o buscá <strong>Xfirex Dev</strong> en Facebook/Instagram</span>
+      </div>
+    </section>
+
+    <footer role="contentinfo" class="reveal">
+      <div>© Xfirex Dev · Creatividad web accesible · Hecho con cariño</div>
+    </footer>
+  </main>
+
+  <script>
+
+    document.addEventListener("DOMContentLoaded", () => {
+      const reveals = document.querySelectorAll(".reveal");
+      const revealOnScroll = () => {
+        for (let el of reveals) {
+          const rect = el.getBoundingClientRect();
+          if (rect.top < window.innerHeight - 80) {
+            el.classList.add("visible");
+          }
+        }
+      };
+      window.addEventListener("scroll", revealOnScroll);
+      revealOnScroll();
+    });
+  </script>
+</body>
+</html>
